@@ -4,7 +4,6 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   FacebookAuthProvider,
-  linkWithPopup,
   signOut,
 } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
 import {firebaseConfig} from './config'
@@ -26,13 +25,12 @@ if (signInButton) {
   signInButton.addEventListener('click', () => {
   // Sign in with Google popup
     signInWithPopup(auth, googleProvider)
-        .then((result) => {
+        .then(() => {
           // Signed in successfully
-          const user = result.user;
-          // Check if the user is already linked with another provider
+
         })
         .catch((error) => {
-          if (error.code == 'auth/account-exists-with-different-credential') {
+          if (error.code === 'auth/account-exists-with-different-credential') {
             alert('Uw email is al gekoppeld aan een Facebook account. Log in met Facebook.');
           }
           // Handle sign-in errors
@@ -51,10 +49,8 @@ if (signInButtonFacebook) {
   signInButtonFacebook.addEventListener('click', () => {
   // Sign in with Facebook popup
     signInWithPopup(auth, facebookProvider)
-        .then((result) => {
+        .then(() => {
           // Signed in successfully
-          const user = result.user;
-          // Check if the user is already linked with another provider
         })
         .catch((error) => {
           if (error.code == 'auth/account-exists-with-different-credential') {

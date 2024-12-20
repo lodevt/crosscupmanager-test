@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Headbar from '../common/Headbar'; // Ensure this is the correct path to your Headbar component
 import '../../styles/styles.css';
 import PuntenTelling from '../common/PuntenTelling';

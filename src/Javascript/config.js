@@ -13,23 +13,6 @@ export const config = {
   atleten_per_wedstrijd: parseInt(process.env.REACT_APP_ATLETEN_PER_WEDSTRIJD, 6),
 };
  
-/*export const config = {
-    AthletesCollection: 'Athletes',
-    DeadlinesColletion: 'Deadlines',
-    MiniCompetitionsCollection: 'MiniCompetitions',
-    RaceResultsCollection: 'RaceResults',
-    StandingsCollection: 'Standings',
-    TakenTeamNamesCollection: 'Taken-team-names',
-    UserCollection: 'Users',
-
-    season: 'season2324',
-
-    atleten_per_wedstrijd: 6,
-
-  }; 
-  */
-
-
 export const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,

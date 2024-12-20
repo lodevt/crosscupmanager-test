@@ -43,7 +43,6 @@ if (signInButton) {
 
 const signInButtonFacebook = document.getElementById('login-button-facebook');
 
-
 const facebookProvider = new FacebookAuthProvider();
 if (signInButtonFacebook) {
   signInButtonFacebook.addEventListener('click', () => {

@@ -3,31 +3,52 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment when changes are pushed to the 'main' branch
+      - main  # Trigger the deployment when changes are pushed to the `main` branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'  # Set the Node.js version you want
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify the Node.js version you need
 
-    - name: Install dependencies
-      run: npm install
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    - name: Create .env file with Firebase API Key
-      run: echo "REACT_APP_FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}" >> .env
+      # Build the app
+      - name: Build the app
+        run: npm run build
+        env:
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+          REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}
+          REACT_APP_FIREBASE_PROJECT_ID: ${{ secrets.REACT_APP_FIREBASE_PROJECT_ID }}
+          REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}
+          REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
+          REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
+          REACT_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}
+          REACT_APP_ATHLETES_COLLECTION: ${{ secrets.REACT_APP_ATHLETES_COLLECTION }}
+          REACT_APP_DEADLINES_COLLECTION: ${{ secrets.REACT_APP_DEADLINES_COLLECTION }}
+          REACT_APP_MINI_COMPETITIONS_COLLECTION: ${{ secrets.REACT_APP_MINI_COMPETITIONS_COLLECTION }}
+          REACT_APP_RACE_RESULTS_COLLECTION: ${{ secrets.REACT_APP_RACE_RESULTS_COLLECTION }}
+          REACT_APP_STANDINGS_COLLECTION: ${{ secrets.REACT_APP_STANDINGS_COLLECTION }}
+          REACT_APP_TAKEN_TEAM_NAMES_COLLECTION: ${{ secrets.REACT_APP_TAKEN_TEAM_NAMES_COLLECTION }}
+          REACT_APP_USER_COLLECTION: ${{ secrets.REACT_APP_USER_COLLECTION }}
+          REACT_APP_SEASON: ${{ secrets.REACT_APP_SEASON }}
+          REACT_APP_ATLETEN_PER_WEDSTRIJD: ${{ secrets.REACT_APP_ATLETEN_PER_WEDSTRIJD }}
 
-    - name: Build the React app
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      uses: gh-pages/gh-pages-action@v1.2.0
-      with:
-        build_dir: build  # Specify the directory to deploy (this is where the build files are generated)
+      # Deploy to GitHub Pages using gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub's default token to push to the repo
+          publish_dir: ./build  # Directory to publish (default is `build` for React apps)
+          user_name: 'github-actions'  # Set the username for the commit
+          user_email: 'github-actions@github.com'  # Set the email for the commit

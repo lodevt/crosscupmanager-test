@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.98e18fd5.css",
+    "main.js": "/static/js/main.7e4e820b.js",
+    "static/js/453.af594a22.chunk.js": "/static/js/453.af594a22.chunk.js",
+    "static/media/Home.png": "/static/media/Home.6a8ae8fe62c2ce2135bb.png",
+    "static/media/Berlare.jpg": "/static/media/Berlare.69c51a2e7b71251f586d.jpg",
+    "static/media/Roeselare.jpg": "/static/media/Roeselare.955bd3e47b6dc6b42826.jpg",
+    "static/media/Hulshout.jpg": "/static/media/Hulshout.1fd0296bdd1da8be81aa.jpg",
+    "static/media/Diest.jpg": "/static/media/Diest.acca252138edaae38883.jpg",
+    "static/media/Hannuit.jpg": "/static/media/Hannuit.39de1c1bc66a82d2555d.jpg",
+    "static/media/Reglement.png": "/static/media/Reglement.e8b2ce13b4789fbeb825.png",
+    "static/media/Onderzoek.png": "/static/media/Onderzoek.b145ae4249413970eab5.png",
+    "static/media/Crosscupmanager2.png": "/static/media/Crosscupmanager2.0fb29ee64c48c95f7a53.png",
+    "static/media/Selectie.png": "/static/media/Selectie.62eaa5aeff3d3ca86879.png",
+    "static/media/Finish.png": "/static/media/Finish.9f59a80b2810ebed9ff9.png",
+    "index.html": "/index.html",
+    "main.98e18fd5.css.map": "/static/css/main.98e18fd5.css.map",
+    "main.7e4e820b.js.map": "/static/js/main.7e4e820b.js.map",
+    "453.af594a22.chunk.js.map": "/static/js/453.af594a22.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98e18fd5.css",
+    "static/js/main.7e4e820b.js"
+  ]
+}

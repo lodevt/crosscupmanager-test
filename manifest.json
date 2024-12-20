@@ -1,0 +1,16 @@
+{
+  "short_name": "Crosscup Manager",
+  "name": "Crosscup Manager 2024-2025",
+  "icons": [
+    {
+      "src": "./Crosscupmanager2.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+

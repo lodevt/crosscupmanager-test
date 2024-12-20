@@ -1,0 +1,70 @@
+/* Style for the input field and button container */
+.minicompetition-search, .invite-container{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin: 10px 0; 
+    width: 100%; /* Make the container take full width */
+    box-sizing: border-box; 
+    padding: 0 20%; 
+  }
+  
+
+/* Style for the input field */
+.minicompetition-input {
+    flex: 1; /* Grow to take available space */
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid var(--darkcolor);
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+    color: var(--accentcolor);
+  
+  }
+  
+  /* Style for the search button */
+  .minicompetition-button {
+    width: fit-content; /* Fixed width for the buttons */
+    background-color: var(--accentcolor);
+    color: white;
+    padding: 10px 20px; /* Adjust the top/bottom padding to control the button's size */
+    border: 3px solid var(--accentcolor);
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Define a separate style for the button */
+  .verlaat-button-style {
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid red;
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  /* Style for the invite text */
+  .invite-text {
+    font-size: 20px; 
+  }
+
+  @media (max-width: 1000px) {
+    .minicompetition-search {
+      padding: 1vw 5vw;
+      font-size: 2em;
+    }
+    .minicompetition-input {
+      font-size: 1.2em;
+      padding: 0.5em;
+    }
+    .minicompetition-button {
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+    }
+  }

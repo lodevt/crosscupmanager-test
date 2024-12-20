@@ -1,0 +1,35 @@
+.puntvoorplaats {
+    display: flex;
+    justify-content: flex-start; /* Zorgt ervoor dat alles aan de linkerkant uitgelijnd is */
+    font-size: 16px;
+    align-items: center;
+    margin-left: 0; /* Verwijder margin-left om uitlijning te verbeteren */
+    height: 25px;
+  }
+  .plaats {
+    padding-right: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    margin: 0.2%;
+  }
+  .punten {
+    width: 30px;
+  }
+  .nth {
+    padding-bottom: 10px;
+  }
+
+
+  .puntentelling-container {
+    display: flex; /* Zorgt ervoor dat de titels en inhoud naast elkaar staan */
+    justify-content: space-between; /* Ruimte tussen de items */
+    margin-bottom: 20px; /* Optionele marge onder de puntentelling */
+  }
+  
+  .puntentelling {
+    flex: 1; /* Zorgt ervoor dat beide items evenveel ruimte innemen */
+    margin: 0 10px; /* Ruimte tussen de items */
+  }

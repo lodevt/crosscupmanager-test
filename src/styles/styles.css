@@ -1,0 +1,1097 @@
+:root {
+  --accentcolor: rgb(0, 200, 200);
+  --darkcolor: rgb(25, 25, 25);
+  --offwhite:rgb(240, 240, 240);
+  --darkaccentcolor: rgb(0, 150, 150);
+  --lessdarkcolor: rgb(15, 15, 15);
+}
+/* CSS Reset to ensure consistent default styles across browsers*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: var(--offwhite);
+  font-family: "TW cen MT", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+.img {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0px;
+  color: var(--darkcolor);
+  overflow-x: hidden;
+}
+
+/* Headbar */
+.headbar {
+  width: 100%;
+  background-color: var(--darkcolor);
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  /*width: 100% !important;*/
+}
+
+
+.headerlogo img {
+  height: 12vh;
+  position: relative;
+  transition: 700ms;
+}
+
+.header {
+  display: inline-block;
+  text-align: center;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 3vh;
+  padding: 1vh;
+  transition: 700ms;
+}
+
+#logged-in-user {
+  color: white;
+  font-size: 2vh;
+  padding-left: 5%;
+}
+#username {
+  color: white;
+  font-size: 2vh;
+  padding-left: 1.5%;
+}
+#username{
+  margin-left:0vh;
+}
+
+.header a:hover {
+  color: var(--accentcolor);
+}
+
+/* UNDERLINER */
+.headunderliner {
+  width: 100%;
+  height: 1vh;
+  background-image: linear-gradient(
+    to right,
+    var(--accentcolor),
+    var(--darkcolor)
+  );
+  color: white;
+  font-size: 40px;
+  align-items: center;
+  display: flex;
+  transition: 6000ms;
+}
+
+
+/* Credit Animation */
+.credit {
+  transition: 4000ms;
+}
+
+.atletiekpiste:hover .credit {
+  padding-left: 80%;
+}
+.finish {
+  position: absolute;
+  height: 210px;
+  left: 70%;
+  padding: 5px;
+}
+.finish img {
+  height: 215px;
+}
+
+/* General Titles */
+.paginatitel {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  font-size: 50px;
+  margin: 2% 0px 20px 0px;
+}
+
+.subtitel {
+  width: 96%;
+  text-align: left;
+  font-size: 30px;
+  margin: 2%;
+  text-decoration: underline solid var(--accentcolor);
+}
+
+.subtitel2 {
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.subtitel-home {
+  font-size: 44px;
+  color: var(--accentcolor);
+  text-align: center;
+}
+
+.search-navigation {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+/* Kalenderboxen */
+.wedstrijdbox {
+  height: 400px;
+  width: 300px;
+  border: 5px solid var(--darkcolor);
+  border-radius: 10px;
+  margin: 15px;
+  display: inline-block;
+}
+
+.wedstrijdfoto {
+  left: 0;
+  height: 80%;
+  width: 100%;
+  background-blend-mode: multiply;
+  background-size: cover;
+  transition: 700ms;
+  border-radius: 5px;
+}
+
+.wedstrijdnaam {
+  width: 100%;
+  display: block;
+  height: 12%;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 5px;
+  text-decoration: underline solid var(--accentcolor);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.wedstrijddatum {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 5px;
+  left: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.wedstrijdbox a {
+  background-color: var(--darkcolor);
+  color: white;
+  text-align: center;
+  height: 10%;
+  border-top: 5px solid var(--darkcolor);
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  transition: 700ms;
+  z-index: 1;
+}
+
+.wedstrijdbox a:hover {
+  background-color: white;
+  color: var(--darkcolor);
+}
+
+/* HoverAnimation Last Year Results */
+.vorigeresults {
+  width: 100%;
+  height: 78%;
+  transition: 700ms;
+  color: transparent;
+  border-radius: 5px;
+}
+
+.wedstrijdfoto:hover .vorigeresults {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--darkcolor);
+}
+
+/* Structuring Blocks */
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.klassement-container {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+.geslachtcontainer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.select-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 59vw;
+  margin: 0 20vw 0 20vw;
+}
+
+.raster {
+  display: inline-block;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color:var(--offwhite);
+  text-align: center;
+}
+.textbox {
+  width: 98%;
+  font-size: 20px;
+  color: var(--darkcolor);
+  display: left;
+  margin-left: 2%;
+}
+
+/* Home-page */
+.homebanner {
+  background: url(../Images/Home.png),
+    linear-gradient(to right, rgba(0, 0, 0, 0.9), 60%, rgba(0, 0, 0, 0));
+  background-blend-mode: color;
+  background-size: cover;
+}
+
+.home-message {
+  padding: 15%;
+  width: 25%;
+  text-align: start;
+  display: grid;
+}
+
+.maak-team {
+  margin-top: 3%;
+  padding: 3%;
+  width: 80%;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid var(--accentcolor);
+  border-radius: 10px;
+  color: var(--accentcolor);
+  text-align: center;
+  transition: 700ms;
+}
+
+.maak-team:hover {
+  background-color: var(--accentcolor);
+  color: white;
+  scale: 1.03;
+}
+
+/* ContactPage */
+.social-icon {
+  width: 100px;
+  height: 100px;
+  border: 7px solid var(--accentcolor);
+  border-radius: 100px;
+  background-color: var(--darkcolor);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 700ms;
+}
+.social-icon:hover {
+  background-color: rgb(255, 255, 255);
+}
+.social-icon img {
+  width: 70%;
+}
+
+/* KlassementPage */
+.klassement-container li {
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: var(--darkcolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 52px;
+  font-size: 20px;
+  border: 4px solid var(--accentcolor);
+  border-radius: 32px;
+  width: 60vw;
+  margin: 4px;
+  color: white;
+  transition: 700ms;
+}
+
+.klassement-container li:hover {
+  background-color: var(--offwhite);
+  color: var(--darkcolor);
+  height: 212px;
+}
+
+.resultcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ploegnaam {
+  position: relative;
+  left: 2%;
+}
+
+.punten {
+  position: relative;
+}
+
+.teamcontainer {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  transition: 700ms;
+  color: var(--darkcolor);
+  text-align: left;
+  font-size: 16px;
+}
+.klassement-container li:hover .teamcontainer {
+  display: flex;
+}
+.teamcontainer img {
+  width: 75%;
+  padding-top: 5%;
+}
+
+.deelteamresult {
+  width: 65%;
+  text-align: start;
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+}
+.symbool {
+  width: 25%;
+  text-align: center;
+}
+.deeltotaal {
+  width: 100%;
+  padding-top: 1vh;
+  padding-left: 0.5vw;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1%;
+}
+
+.kolom {
+  font-size: 1em;
+  width: 50%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+}
+.form-group label {
+  width: fit-content;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+.form-control {
+  font-family: "TW cen MT", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid var(--darkcolor);
+}
+
+.selectorButton{
+  border-radius: 3em;
+  font-size: 3em;
+  padding: 0.4em 0.8em;
+  border: 0.1em solid var(--accentcolor);
+  margin: 0.5em;
+  background: var(--offwhite);
+  color: var(--accentcolor);
+  transition: 700ms;
+}
+
+.selectorButton:hover{
+  background: var(--accentcolor);
+  color: var(--offwhite);
+}
+
+.credit-container {
+  display: flex;
+}
+
+
+.form-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  align-items: center;
+  background-color: var(--lightcolor);
+  color: white;
+}
+
+.form-container-opstelling {
+  justify-content: center;
+  display: flex;
+  direction: ltr;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  border: 3px solid var(--accentcolor);
+  border-radius: 10px;
+  align-items: center;
+  background-color: var(--darkcolor);
+  color: white;
+}
+
+.aanmeldcontainer {
+  display: flex;
+  width: 20%;
+}
+.btn-primary{
+  background-color: white;
+  border: 3px solid var(--accentcolor);
+  border-radius: 5px;
+  color: var(--accentcolor);
+  padding: 24px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  font-family: "TW cen MT";
+  transition: 700ms;
+}
+.btn-primary:hover {
+  background-color: var(--accentcolor);
+  color: white;
+}
+
+#login-button,
+#logout-button {
+  background-color: white;
+  border: 0.5vh solid var(--accentcolor);
+  border-radius: 1vh;
+  color: var(--accentcolor);
+  padding: 2vh;
+  height: 8vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vh;
+  font-family: "TW cen MT";
+  transition: 700ms;
+  cursor: pointer;
+}
+#login-button:hover,
+#logout-button:hover {
+  background-color: var(--accentcolor);
+  color: white;
+}
+
+#login-button-google,#login-button-facebook{
+  margin-top: 3vh;
+  border-radius: 0.5em;
+  font-size: 3vh;
+  font-family: "TW cen MT";
+  transition: 700ms;
+  padding: 2vh;
+}
+
+
+#login-button-google{  
+  border: 5px solid rgb(228, 62, 43);
+  color: var(--darkcolor);
+  background-color: white;
+}
+#login-button-google:hover{
+  background-color:rgb(228, 62, 43);
+  color: white;
+  cursor: pointer;
+}
+
+#login-button-facebook {
+  border:5px solid rgba(25,119,243,1); 
+  background:white; 
+  color: var(--darkcolor);
+}
+#login-button-facebook:hover{
+  background-color:rgb(25,119,243);
+  color: white;
+  cursor: pointer;
+}
+.column {
+  width: 40%;
+  margin: 0%;
+  padding: 5px;
+}
+
+/*Singlets voor atleetnaam*/
+.column h6:before {
+  content: url(../Images/MenSinglet.png);
+  height: 30px;
+  width: 30px;
+  padding-right: 20px;
+}
+
+.women h6:before {
+  content: url(../Images/WomenSinglet.png);
+  height: 30px;
+  width: 30px;
+  padding-right: 20px;
+}
+
+
+/* Style for checked checkbox */
+.opstelling-mannen input[type="checkbox"]:checked + label:before {
+  content: url(../Images/MenSinglet.png); /* Checked image */
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Style for unchecked checkbox */
+.opstelling-mannen input[type="checkbox"] + label:before {
+  content: url(../Images/Slaap.png); /* Unchecked image */
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.athlete-container, .athlete-container-women, .athlete-container-bench, .athlete-container-women-bench {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 40px; 
+  margin-bottom: 10px; 
+}
+
+.athlete-container::before {
+  content: url(../Images/MenSinglet.png); 
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; 
+}
+
+.athlete-container-bench::before {
+  content: url(../Images/Slaap.png);
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; 
+}
+.athlete-container-women::before {
+  content: url(../Images/WomenSinglet.png); 
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; 
+}
+.athlete-container-women-bench::before {
+  content: url(../Images/SlaapWomen.png); 
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.athlete-container::after, .athlete-container-women::after {
+  content: attr(data-points) " punten";
+  margin-left: auto; /* Push points to the right */
+}
+
+.athlete-container-bench::after, .athlete-container-women-bench::after {
+  content: attr(data-points) " punten";
+  margin-left: auto; /* Push points to the right */
+}
+
+/* Style for checked checkbox */
+.opstelling-vrouwen input[type="checkbox"]:checked + label:before {
+  content: url(../Images/WomenSinglet.png); /* Checked image */
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Style for unchecked checkbox */
+.opstelling-vrouwen input[type="checkbox"] + label:before {
+  content: url(../Images/SlaapWomen.png); /* Unchecked image */
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+*:is(.opstelling-mannen,.opstelling-vrouwen) label{
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+  display: inline-flex;
+  align-items: flex-end;
+  cursor: pointer;
+  width: 30%;
+  white-space: nowrap;
+}
+
+/*Namen van atleten in Male en Female Team + Remaining budget*/
+.column h5 {
+  font-size: 20px;
+  margin: 5px;
+}
+.column h6 {
+  display: flex;
+  margin: 1vh;
+  border: none;
+  font-size: 20px;
+  align-items: center;
+}
+/*Kaders rond Male Team en Female team*/
+.gekozenteam {
+  padding: 5px;
+  border: 3px solid var(--accentcolor);
+  border-radius: 10px;
+  width: 100%;
+}
+/*Kaders rond Opstelling*/
+.opstelling-mannen, .punten-mannen {
+  padding: 5px;
+  border: 3px solid var(--accentcolor);
+  border-radius: 10px;
+  width: 100%;
+}
+/*Kaders rond Opstelling*/
+.opstelling-vrouwen, .punten-vrouwen  {
+  padding: 5px;
+  border: 3px solid var(--accentcolor);
+  border-radius: 10px;
+  width: 100%;
+}
+/* Zoekbar om Atleten te zoeken */
+.zoekatleet {
+  font-family: "TW cen MT", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  background-color: var(--darkcolor);
+  border: 3px solid var(--accentcolor);
+  border-radius: 40px;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.zoekatleet::placeholder {
+  color: white;
+}
+.zoek-container {
+  width: 100%;
+  padding: 0%;
+}
+.zoek-container li {
+  font-size: 16px;
+  padding: 2px;
+  accent-color: var(--accentcolor);
+  align-items: center;
+  display: flex;
+}
+.opstelling-mannen input{
+  accent-color: var(--accentcolor);
+}
+.opstelling-vrouwen input{
+  accent-color: var(--accentcolor);
+}
+*:is(.zoek-container,.opstelling-mannen,.opstelling-vrouwen) input[type="checkbox"] {
+  padding: 5px;
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.stapplan {
+  display: block;
+  width: 90%;
+  background-color: var(--offwhite);
+  text-align: center;
+}
+.stapkaart {
+  width: 400px;
+  margin-top: 50px;
+  margin: 10px;
+  text-align: left;
+  height: 500px;
+  display: inline-block;
+}
+.stapkaartfoto {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+}
+.stap1 {
+  background-image: url(../Images/Reglement.png);
+}
+.stap2 {
+  background-image: url(../Images/Onderzoek.png);
+}
+.stap3 {
+  background-image: url(../Images/Selectie.png);
+}
+
+.selectorRaces,  .selectorMinicompetitions {
+  width: 40%;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 40px;
+  
+  color: var(--accentcolor);
+
+  border: 0.5vh solid var(--darkcolor);
+  border-radius: 30px;
+  height: 60px;
+  font-family: "TW cen MT", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-left: 10px;
+}
+.filterButton {
+  background-color: white;
+  color: var(--darkcolor);
+}
+#teamname{
+  color: var(--accentcolor);
+}
+.uncheck-cross{
+  cursor:pointer;
+}
+
+.opstelling {
+  width: 40%;
+}
+.turnphone{
+  display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1500px) {
+  .select-container {
+    display: block;
+  }
+  .klassement-container li {
+    width: 90vw;
+  }
+  .selectorRaces {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .opstelling {
+    width: 100%;
+  }
+}
+.opstelling {
+  width: 90%;
+}
+.popup {
+  width: 100vw;
+  height: 87vh;
+  position: fixed;
+  top: 13vh;
+  left:0;
+  background-image: url(../Images/Home.png),
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), 60%, rgba(0, 0, 0, 0.65));
+  background-blend-mode: color;
+  background-size: cover;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 12vh;
+  width: 12vh;
+  padding: 1.5vh;
+  padding-left: 3vh;
+  border-top-left-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+}
+.hamburger span {
+  display: block;
+  width: 80%;
+  height: 1vh;
+  margin: 1.5vh 10%;
+  background-color: white;
+  border-radius: 0.5vh;
+  transition: transform 700ms;
+}
+
+#login-button,#logout-button {
+  position: absolute;
+  height: 12vh;
+  width: fit-content;
+  padding: 3.5vh 6vh;
+  display: flex;
+  justify-content: center;
+  font-size: 4vh;
+  right: 0vw;
+  margin: 0;
+  top: 0;
+  background-color: var(--accentcolor);
+  color: white;
+  border-top-left-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  transition: 500ms;
+}
+#login-button:hover,#logout-button:hover{
+  background-color: var(--darkaccentcolor);
+  color: white;
+  border-color: var(--accentcolor);
+}
+
+
+/* Style for the invite text */
+.invite-text {
+  font-size: 20px; 
+}
+
+
+
+@media (max-width: 1500px) {
+  .phonesmaller {
+    display: grid;
+    justify-items: center;
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .turnphone {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 1000px) and (min-height: 500px), (max-width: 700px) {
+  /*Hamburger styling and animation*/
+  .hamburger {
+    display: block;
+    background-color: var(--darkaccentcolor);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(2.5vh) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-2.5vh) rotate(-45deg);
+  }
+  .header {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    max-width: 100%;
+    top: 12vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    transition: left 1000ms;
+  }
+  .header a:nth-child(odd) {
+    background-color: var(--lessdarkcolor);
+  }
+  .header a:nth-child(1) {
+    left: -10%;
+  }
+  .header a:nth-child(2) {
+    left: -30%;
+  }
+  .header a:nth-child(3) {
+    left: -50%;
+  }
+  .header a:nth-child(4) {
+    left: -70%;
+  }
+  .header a:nth-child(5) {
+    left: -90%;
+  }
+  .header a:nth-child(6) {
+    left: -110%;
+  }
+  .header a:nth-child(7) {
+    left: -130%;
+  }
+  .header a {
+    margin: 0px;
+    background-color: var(--darkcolor);
+    font-size: 5vh;
+    position: relative;
+    transition: 700ms;
+    left: -100%;
+  }
+  .header.active a {
+    left: 0%;
+  }
+  .header.active {
+    left: 0%;
+  }
+  #login-button,#logout-button {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    color: white;
+    background-color: var(--darkaccentcolor);
+    font-size: 5vh;
+    padding: 1vh;
+    height: 8vh;
+    width: 100%;
+    transition: 700ms;
+    z-index: 10;
+    border: none;
+    border-radius: 0;
+  }
+  .paginatitel {
+    font-size: 5vh;
+  }
+  .home-message {
+    font-size: 4vh;
+    padding: 10%;
+    width: fit-content;
+
+  }
+  .subtitel-home{
+    font-size: 4vh;
+  }
+  .homebanner {
+    display: flex;
+    justify-content: center;
+    background: url(../Images/Home.png),
+      linear-gradient(to right, rgba(0, 0, 0, 0.8), 60%, rgba(0, 0, 0, 0.5));
+}
+  .maak-team {
+    font-size: 4vh;
+    width: 100%;
+  }
+  .stapkaart {
+    width: 60vw;
+    height: fit-content;
+  }
+  .textbox {
+    font-size: 1em;
+    margin-top:2em ;
+  }
+  .stap1,.stap2,.stap3 {
+    height: 40vw;
+}
+  .wedstrijdbox{
+    width: 80vw;
+    height: 80vw;
+  }
+  .wedstrijdnaam {
+    font-size: 6vw;
+  }
+  .wedstrijddatum {
+    font-size: 4vw;
+  }
+  .wedstrijdbox a{
+    font-size: 5vw;
+  padding: 1.5vw;}
+
+  .kolom {
+    font-size: 2.2em;
+    width: 50%;
+    text-align: left;
+    padding-left: 0.9em;
+  }
+
+  .klassement-container li{
+    height: 10vw;
+    font-size: 2.6em;
+    padding: 0.8em;
+    height: 3em;
+    margin: 0.4em;
+  }
+  .klassement-container li:hover {
+    height: 9em;
+  }
+  .select-container {
+    width: 90vw;
+    margin:5vw;
+  }
+  .selectorRaces {
+    font-size: 3em;
+    height: 3em;
+    margin: 0.4em 0;
+    border-radius: 0.5em;
+  }
+  .teamcontainer {
+    font-size: 0.6em;
+  }
+  .form-control {
+    font-size: 2em;
+    padding: 1em;
+    border: 3px solid var(--accentcolor);
+    border-radius: 0.5em;
+  }
+  .btn-primary {
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+  .column{
+    width: 80%;
+  }
+  .zoek-container input[type="checkbox"] {
+    width: 4em;
+    height: 4em;
+  }
+  .zoek-container li {
+    font-size: 2em;
+    margin:0.5em
+  }
+  .column h6{
+    font-size: 2em;
+  }
+  .column h5{
+    font-size: 3em;
+  }
+  .subtitel{
+    font-size: 2.1em;
+  }
+  .zoekatleet{
+    font-size: 3em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+  }
+}

@@ -1,0 +1,128 @@
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.chat-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.toggle-chat-button {
+    position: fixed; /* Keep button fixed */
+    bottom: 3vh; /* Position above the chat */
+    right: -3vh; /* Align with chat */
+    padding: 20px 20px;
+    padding-right:5vh ;
+    font-size: 3vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: rgb(255, 92, 92); /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it is above other content */
+    transition: background-color 0.3s, right 0.3s;
+}
+
+.toggle-chat-button:hover {
+    background-color: rgb(182, 25, 255); /* Darker blue on hover */
+    right: -1vh;
+}
+
+
+.chat-overlay {
+    position: fixed; /* Position it fixed so it stays in view */
+    bottom: 10vh; /* Align to the bottom */
+    right: 10px; /* Align to the right */
+    width: 50vw; /* Set the width to 400 pixels */
+    max-height: 77vh; /* Limit the height of the chat overlay */
+    background-color: #fff; /* White background for contrast */
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 9999; /* Ensure it appears above other content */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    font-size: 2vh;
+}
+
+
+
+.chat-messages {
+    flex: 1; /* Allow the messages to take available space */
+    max-height: 40vh; /* Limit the height of the chat overlay */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional padding for spacing */
+    background-color: #f9f9f9; /* Light background for messages */
+}
+
+.chat-message {
+    margin: 10px 0; /* Add some space between messages */
+    padding: 6px; /* Padding for message bubbles */
+    border-radius: 4px; /* Rounded corners for messages */
+    background-color: #e1e1e1; /* Slightly darker background for messages */
+}
+
+.chat-input {
+    display: flex; /* Use flexbox for input and button */
+    padding: 10px; /* Add padding around input area */
+    background-color: #fff; /* White background for input area */
+    border-top: 1px solid #ccc; /* Border at the top */
+}
+
+.chat-input input {
+    flex: 1; /* Allow input to take available space */
+    margin-right: 10px; /* Add margin between input and button */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 0.2em; /* Optional rounded corners */
+    padding: 10px; /* Add some padding */
+    font-size: 1em;
+}
+
+.chat-send-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0.2em;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.chat-send-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.chat-timestamp {
+    font-size: 0.8em; /* Smaller font size for timestamp */
+    color: #999; /* Grey color for a softer look */
+    margin-top: 2px; /* Space above the timestamp */
+}
+
+@media (max-width: 1000px) {
+    .chat-overlay {
+        width: 75vw;
+    }
+    
+}
+
+
+
+
+

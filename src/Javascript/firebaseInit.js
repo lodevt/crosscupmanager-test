@@ -1,5 +1,4 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
-import {getAnalytics} from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js';
 import {
   getAuth,
   signInWithPopup,

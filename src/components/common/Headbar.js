@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-    getAuth,
-    signOut,
-} from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
+
 import { getFirestore, collection, doc, getDoc, updateDoc, setDoc } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js';
 
 import '../../styles/styles.css'; 

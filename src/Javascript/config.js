@@ -12,7 +12,6 @@ export const config = {
   season: process.env.REACT_APP_SEASON, 
   atleten_per_wedstrijd: parseInt(process.env.REACT_APP_ATLETEN_PER_WEDSTRIJD, 6),
 };
-
  
 /*export const config = {
     AthletesCollection: 'Athletes',

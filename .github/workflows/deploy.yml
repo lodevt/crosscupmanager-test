@@ -25,7 +25,8 @@ jobs:
 
       # Build the app
       - name: Build the app
-        run: npm run build
+        run: |
+          CI=false npm run build
         env:
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
           REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}
